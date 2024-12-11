@@ -1,0 +1,824 @@
+/* Reset de page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,698;1,698&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantia do espaçamento */
+    color: #F2F2F2;
+}
+
+body {
+    background-image: linear-gradient( to right,#161C24, #141c26 );
+    overflow-x: hidden;
+}
+
+h1, h2, h4, label, legend {
+    color: #BF1304;
+    font-family: 'montserrat';
+}
+
+p{
+    color: #ffffff;
+    font-family: 'inter';
+    font-weight:300;
+    
+}
+
+/* Página index */
+header, 
+section h2,
+form button {
+    font-family:'montserrat';
+    font-weight: normal;
+}
+
+.flex-container p {
+    font-family: "Domine", system-ui;
+}
+
+body input, textarea {
+    font-family: "Domine", system-ui;
+    background-color: #e5f0f0;
+}
+
+header a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* Conteúdo do cabeçalho da page */
+header {
+    position: fixed;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #BF1304;
+    color: white;
+    position:sticky;
+}
+
+/* Conteúdo dos tópicos cabeçalho da page */
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Conteúdo textual dos tópicos do cabeçalho da page */
+header nav li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Pseudo-Classe para alteração/estilo dos tópicos cabeçalho da page */
+header nav a:hover, header a:hover {
+    text-decoration: underline;
+    color:#F2F2F2;
+}
+
+/* Config cabeçalho */
+header .container {
+    /*margem do header*/
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo img {
+
+    padding: 0;
+    margin: 0;
+    width: 120px;
+}
+
+/* Conteúdo na page */
+.container {
+ /* aplicação para espaçamento e view no pc */
+    margin: 0 auto; /* 4 casas: "0"=top, "auto"=right, "0"=bottom "auto"=left */
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 30px;
+}
+#redireciona-compra-index{
+    text-align: center;
+}
+
+#redireciona-compra-index h3{
+    color:#9c9797;
+}
+#redireciona-compra-index a:hover, .btn-deslog a:hover{
+    color: #BF1304;
+}
+
+footer {
+    width: 100%;
+    display: block;
+    background-color: #BF1304;
+    color: aliceblue;
+    padding: 3%;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    position: sticky;
+    
+}
+
+
+/* ---- PAGE HOME/INDEX */
+.wrapper {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items:start;   
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container_movies {
+    height: 450px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 92%;
+    
+}
+
+.card {
+    width: 120px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color:white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+display: flex;
+justify-content: center;
+flex-direction: column;
+overflow: hidden;
+height: 80px;
+width: 520px;
+opacity: 0;
+transform:translateY(30px) ;
+transition-delay: .3s;
+transition: all .3s ease;
+}
+
+.description p {
+color:#000000 ;
+font-size:12px;
+padding: 5px;
+}
+
+.description h4 {
+text-transform: uppercase;
+font-size:13px ;
+}
+
+.container_movies input {
+display: none;
+}
+
+.container_movies  input:checked + label {
+width: 600px;
+
+}
+
+.container_movies input:checked + label .description {
+
+opacity: 1 !important;
+transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+background-image: url("./imgs/imagens/img1.png");
+}
+
+.card[for="c2"] {
+background-image: url("./imgs/imagens/img2.jpg");
+}
+
+.card[for="c3"] {
+background-image: url("./imgs/imagens/img3.jpg");
+}
+
+.card[for="c4"] {
+background-image: url("./imgs/imagens/img4.jpg");
+}
+
+.card[for="c5"] {
+background-image: url("./imgs/imagens/img5.png");
+}
+
+.card[for="c6"] {
+background-image: url("./imgs/imagens/img6.jpg");
+}
+
+.card[for="c7"] {
+background-image: url("./imgs/imagens/img7.jpg");
+}
+
+.card[for="c8"] {
+background-image: url("./imgs/imagens/img8.jpg");
+}
+
+.card[for="c9"] {
+background-image: url("./imgs/imagens/img9.jfif");
+}
+
+.card[for="c10"] {
+background-image: url("./imgs/imagens/img10.jpg");
+}
+
+
+
+/* ---- PAGE CONTATO */
+#titulocont {
+text-align: center;
+padding: 10px;
+}
+
+.formContato{
+    margin-top:5px ;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 60px;
+    box-shadow: 10px 10px 40px rgba(113, 113, 113, 0.186);
+    gap: 5px
+}
+.contact_methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.contact_methods label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #223;
+}
+
+.contact_methods legend {
+    font-weight: 600;
+    color: #BF1304;
+    font-size: larger;
+}
+.radios {
+    margin-top: 10px;
+}
+
+.radios input {
+    display: inline;
+    width: 20px;
+    height: 15px;
+}
+
+#txtamens {
+    color: #400101;;
+}
+
+ form input,
+ form textarea,
+ button {
+    background-color: #12100d00;
+    color: #000000;
+    width: 400px;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    
+}
+
+form textarea {
+resize: none;
+margin-top: 5px;
+margin-bottom: 20px;
+height: 100px;
+}
+
+.formContato input:focus, .formContato textarea:focus {
+    
+    outline: 3px solid #BF1304;
+}
+
+form button{
+    
+    background-color: #BF1304;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+form button:hover{
+    transform: scale(1.05);
+    background-color: #730202;
+}
+
+
+
+/* ---- PAGE AGRADECIMENTO && CONF. DE COMPRA */
+#agradecimentos, #confirm_compra {
+    text-align: center;
+    display: inline;
+    justify-content:center; 
+    align-items:center;
+    padding: 50px;
+}
+
+#agradecimentos h2, #confirm_compra h2 {
+    margin-bottom: 7px;
+    color: #9c9797;
+}
+#agradecimentos p, #confirm_compra p {
+    margin-bottom: 7px;
+    font-size:25px;
+}
+
+#tituloagra, #confirmada {
+    text-align: center;
+    font-size: 70px;
+}
+
+/* ---- PAGE SOBRE NÓS */
+#sobre_nos {
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#sobre_nos h1{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.integrantes {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between; 
+    align-items: center;
+    
+}
+
+.integrantes img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: sticky;
+}
+
+.integrantes img:hover {
+    transform: scale(1.05);
+}
+
+.integrantes h4{
+    color: #9c9797;
+}
+
+.integrantes h4:hover {
+    color:#BF1304;
+    cursor: pointer;
+}
+
+#kaio, #gabriel, #larissa, #jessica, #leticia, #jonas {
+    width: 180px;
+}
+
+.estruturas {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items:flex-start;
+}
+
+.estruturas img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px; 
+}
+
+#txtestru {
+    /*background-color:#e9a209;*/
+    font-size:large;
+    margin-right: 60px;
+    height: 300px;
+    text-align: justify;
+}
+#txtestru h2 , #txtsession h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.sessions {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items:flex-start;
+}
+.sessions img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#txtsession {
+    /*background-color:#e9a209;*/
+    font-size:large;
+    margin-left: 60px;
+    height: 300px;
+    text-align: justify;
+}
+
+/*---- PAGE COMPRA DESLOGADO ----*/
+#page_deslogado {
+    text-align: center;
+    padding: 10px;
+}
+
+#page_deslogado h1 {
+    text-align: center;
+    font-size: 70px;
+}
+/* ---- PAGE COMPRA ---- */
+#compra h1{
+    box-shadow: #ffffff;
+    color: #730202;
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+}
+
+#mensagemLogou {
+    padding: 10px;
+    text-align: center;
+}
+.compra{
+    display: flex;
+}
+
+.container_carrinho {
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+@media (max-width: 768px) {
+    .container_carrinho {
+        width: 35%; /* Ajuste para dispositivos menores */
+    }
+}
+
+.ingresso_filme input, .pagamento_filme input {
+    font-family: 'inter';
+    color: #ffffff;
+}
+
+.filme_slide{
+    display: flex;
+    transform: translateX(5vw); /* Move as imagens 5% da largura da viewport para a esquerda */      
+}
+
+
+/* Estilo para cada slide */
+.filme_slide img {
+    width: 25vw;
+    height: 60vh;
+    border-radius: 10%;
+    transition: transform 1.3s ease; /* Suaviza o efeito de zoom */
+}
+
+.filme_slide img:hover {
+    transform: scale(1.05);
+}
+
+/* Efeitos de transição */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s; /* tempo para visualizar next img */
+}
+
+
+/* Setas ocultas, padrão apenas para ajustes e testes */
+.prev , .next {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    color: white;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posicionamento das setas 
+.prev {
+    margin-left: 165px;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 1105px;
+    border-radius: 0 3px 3px 0;
+}*/
+
+/* Estilo para as setas ao passar o mouse
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+*/
+
+.compra_form {
+    transform: translateX(10vw); /* Move as imagens 10% da largura da viewport para a esquerda */ 
+}
+
+.choose_filme {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Espaçamento menor entre os itens */
+    margin-bottom: 30px;
+}
+
+.choose_filme label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    width: 25%; /* Ajusta a largura para caber mais itens por linha */
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .choose_filme {
+        width: 35%; /* Ajuste para dispositivos menores */
+    }
+}
+
+.ingresso_filme {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#ingresso {
+    width: 70px;
+    text-align: center;
+}
+
+.ingresso_filme input {
+    margin-left: 10px;
+}
+
+.ingresso_filme label {
+    margin-left: 30px;
+}
+
+.compra_form {
+    transform: translateX(10vw); /* Move as imagens 10% da largura da viewport para a esquerda */ 
+}
+
+
+.pagamento_filme {
+    display: flex;
+    gap: 5px; /* Espaçamento menor entre os itens */
+    margin-bottom: 30px;
+    margin-right: 50vb;
+    margin-top: 10px;
+    
+}
+
+@media (max-width: 768px) {
+    .choose_filme label {
+        width: 35%; /* Ajuste para dispositivos menores */
+    }
+}
+
+.pagamento_filme input {
+    margin-left: 10px;
+    flex-direction: column;
+    width: 60%; /* Ajusta a largura para caber mais itens por linha */
+}
+
+.pagamento_filme label {
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.pagamento_filme #nome {
+    width: 260px;
+}
+
+#cartao {
+    width: 180px;
+}
+
+#validade, #ccv {
+    width: 100px;
+}
+
+.bandeiras {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.bandeiras label {
+    margin-bottom: 20px;
+}
+
+
+.logo_bandeira {
+    width: 5%; 
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+
+/*----page de Login-----*/
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(92, 92, 92, 0.4);
+    gap: 5px
+}
+
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 2.3em;
+}
+
+.formLogin p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+
+.formLogin input:focus {
+    border: 1px solid #730202;
+}
+
+.formLogin label {
+    color:#171C23;
+    font-size: 14px;
+    font-weight: 600;
+}
+.btn {
+    background-color: #BF1304;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #730202;
+
+}
+
+/*---- Melhores cinemas---*/
+.select-cinema{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.formCinema select{
+    height: 47px;
+    width: 300px;
+    color: #000000;
+}
+.formCinema option{
+    height: 300px;
+    color: #000000;
+}
+
+.btn-select{
+    width: 100px;
+    background-color: #BF1304;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+}
+.txtCinema{
+    text-align: center;
+}
+.txtCinema h1{
+    font-size: 30px;
+}
+.conteudo-margem{
+    padding: 40px;
+}
+
+.lista-cinemas{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 15px;
+}
+
+.lista-cinemas h2{
+    margin-top: 10px;
+}
+
+.lista-cinemas h1{
+font-size: 50px;
+}
+
+/*erro*/
+.erro{
+    text-align: center;
+}
+.erroh1{
+    font-size: 6rem;
+    padding: 1rem;
+    
+}
