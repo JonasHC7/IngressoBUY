@@ -1,6 +1,7 @@
  INGRESSO BUY - Sistema de Compra de Ingressos
 
 IngressoBuy é uma plataforma online para compra de ingressos para cinemas. O sistema permite aos usuários fazerem login, visualizar filmes disponíveis e comprar ingressos de maneira interativa.
+
 Objetivo do Projeto
 
 O projeto acadêmico foi desenvolvido com o objetivo de oferecer uma plataforma simples e eficiente para a compra de ingressos de cinema. As funcionalidades principais incluem:
