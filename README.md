@@ -46,8 +46,6 @@ Como Rodar o Projeto
     Abra os arquivos PHP no seu servidor local (ex: WAMP).
     Acesse o projeto no navegador.
 
-Layout
-
-Seguem fotos do layout: home.PNG home1.PNG compra.PNG contate-nos.PNG sobre-nos.PNG
 Contribuições
+
 Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, fique à vontade para abrir uma issue ou enviar um pull request.
